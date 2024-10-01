@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Room, Topic, Message
+from .models import Room, Topic, Message, User
 
 @admin.register(Room)
 class RoomAdmin(admin.ModelAdmin):
@@ -44,4 +44,8 @@ class MessageAdmin(admin.ModelAdmin):
             'classes': ('collapse',)
         }),
     )
+
+admin.site.register(User)
+
+
 
