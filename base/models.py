@@ -1,4 +1,5 @@
 from django.db import models
+from auditlog.registry import auditlog
 from django.contrib.auth.models import User
 
 
@@ -39,3 +40,9 @@ class Message(models.Model):
 
     def __str__(self):
         return self.body[0:50]
+
+
+auditlog.register(Topic)
+auditlog.register(Room)
+auditlog.register(Message)
+auditlog.register(User)
