@@ -1,6 +1,4 @@
-from lib2to3.fixes.fix_input import context
 from pydoc_data.topics import topics
-
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
